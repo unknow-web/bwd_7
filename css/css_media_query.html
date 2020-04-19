@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style lang="">
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .test{
+            width: 350px;
+            /* height: 100px; */
+            background-color: grey;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        @media screen and (max-width: 1024px){
+            .test{
+                width: 49%;
+                background-color: skyblue;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .test{
+                width: 100%;
+                background-color: hotpink;
+                color: white;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="test">
+        <h1>Media Query Testing</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt impedit non eveniet, qui quasi, vitae laborum beatae id iste neque deleniti ad eaque perferendis, quos fugiat amet nobis reprehenderit. Iure.
+        </p>
+    </div>
+
+    <div class="test">
+        <h1>Media Query Testing</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt impedit non eveniet, qui quasi, vitae laborum
+            beatae id iste neque deleniti ad eaque perferendis, quos fugiat amet nobis reprehenderit. Iure.
+        </p>
+    </div>
+
+    <div class="test">
+        <h1>Media Query Testing</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt impedit non eveniet, qui quasi, vitae laborum
+            beatae id iste neque deleniti ad eaque perferendis, quos fugiat amet nobis reprehenderit. Iure.
+        </p>
+    </div>
+    
+</body>
+</html>
