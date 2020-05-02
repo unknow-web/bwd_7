@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .cal-key{
+            background-color: grey;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calc">
+    <h1 class="display-box"></h1>
+    <div class="keypad"></div>
+</div>
+
+<script>
+    let displayBox = document.querySelector(".display-box");
+    let keypad = document.querySelector(".keypad");
+    let calcKey = ["+","-","*","/","="];
+    let entry = {
+        data : [],
+        setDisplay:function (x) {
+            return this.data.push(x);
+        },
+        getDisplay:function () {
+            return this.data;
+        },
+        getLast:function () {
+            if(this.data.length >= 1){
+                return this.data[this.data.length-1];
+            }else{
+                return 0;
+            }
+        },
+
+
+    };
+
+    function showDisplay(x){
+        displayBox.innerHTML += x;
+    }
+    function calculate(){
+        let calcText = displayBox.innerHTML;
+        displayBox.innerHTML = eval(calcText);
+    }
+
+    for(i=0;i<=9;i++){
+        keypad.innerHTML += `<button class='key no-key' onclick='showDisplay(${i})'>${i}</button>`;
+    }
+
+
+    calcKey.map((el)=> {
+        if(el == "="){
+            keypad.innerHTML += `<button class="key cal-key" onclick="calculate()">${el}</button>`;
+
+        }else{
+            keypad.innerHTML += `<button class="key cal-key" onclick="showDisplay('${el}')">${el}</button>`;
+        }
+    });
+</script>
+
+</body>
+</html>

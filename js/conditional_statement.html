@@ -1,0 +1,49 @@
+<h1>Conditional Statements</h1>
+
+<p>Bill ရှိလား ချစ်သူ?</p>
+<ul>
+    <li>အင်း 😁 true</li>
+</ul>
+
+<br>
+<br>
+
+<p>Bill ရှိလား ဘောဒါ?</p>
+<ul>
+    <li>ရှိတယ် 😁 true</li>
+    <li>မရှိဘူး 🙁 false</li>
+</ul>
+
+<br>
+<br>
+
+<p>Bill ရှိလား အမေ?</p>
+<ul>
+    <li>မရှိဘူး ချိီးထားတာ ၀ကျပ်အောက် 🙁</li>
+    <li>မရှိဘူး ၀ကျပ် 🙁</li>
+    <li>နည်းနည်းပဲ ရှိတယ် ၁၀၀၀ကျပ် အောက် 😁</li>
+    <li>ရှိတယ် ၃၀၀၀အောက် 😁</li>
+    <li>ငါ့ကိုဘာမှတ်နေလဲ ၃၀၀၀ နှင့်အထက် 😁</li>
+</ul>
+
+
+<script>
+  
+    function askBill(bill){
+        //task
+        if(bill < 0){
+            console.log('မရှိဘူး ချိီးထားတာ');
+        }else if(bill == 0){
+            console.log('မရှိဘူး');
+        }else if(bill <= 1000){
+            console.log('နည်းနည်းပဲ ရှိတယ်');
+        }else if(bill <= 3000){
+            console.log('ရှိတယ်');
+        }else if(bill > 3000){
+            console.log('ငါ့ကိုဘာမှတ်နေလဲ');
+        }else{
+            console.log('ထည့်သွင်းမူ့ မှာရွှင်းနေပါတယ် ....');
+        }
+    }
+</script>
+

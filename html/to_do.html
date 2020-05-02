@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="input"><button id="add-btn">Add</button> 
+    <ul id="list">
+        
+    </ul>  
+    <script>
+    let list = document.getElementById("list");
+    let input = document.getElementById("input");
+    let btn = document.getElementById("btn-add");
+    let i=1;
+
+    function getLi(){
+        let li = document.querySelectorAll(".list");
+        return li;
+    }
+
+    list.addEventListener("click",function (el) {
+        console.log(el);
+    })
+   
+
+    document.getElementById("add-btn").addEventListener('click',function(){
+        let x = input.value;
+        console.log(x);
+        list.innerHTML += `<li class='list' id="list-${i}"><button onclick="deletetList">Delete</button> <span>${x}</span></li>`;
+        i++;
+    });
+    </script> 
+</body>
+</html>

@@ -1,0 +1,57 @@
+<h1>Function, Arrow Funciton (ES6)</h1>
+<button>Click Me</button>
+<script>
+
+
+    // function one() {
+    //     console.log("This is function One");
+    // }
+
+    let one = () => console.log("this is function one");
+
+    // function two(){
+    //     let x = "x variable";
+    //     console.log(x);
+    // }
+
+    let two = () => {
+        let x = "x variable";
+        console.log(x);
+    };
+
+    // function three(x) {
+    //     console.log(x);
+    // }
+
+    let three = x => console.log(x);
+
+    // function four(x,y=1) {
+    //     console.log({x,y});
+    // }
+
+    let four = (x, y=1) => console.log({x,y});
+
+    // document.querySelector("button").addEventListener("click",function () {
+    //     console.log("this is five function");
+    // });
+
+    document.querySelector("button").addEventListener("click",()=>console.log("this if five"));
+
+    //IIFE
+    // (function(){
+    //     console.log("this is IIFE");
+    // })();
+
+    (()=>console.log('this is IIFE with arrow function'))();
+
+    let obj = {
+
+        name : "hein htet zan",
+        teach : function(){
+            console.log(`${this.name} can teach Web Development`);
+        },
+        learn : () => console.log(`${obj.name} can learn Web Design`),
+
+    };
+
+</script>
